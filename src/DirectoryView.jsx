@@ -24,7 +24,7 @@ import ConfirmDeleteModal from "./components/ConfirmDeleteModel";
 
 function DirectoryView() {
   const { dirId } = useParams();
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const [directoryName, setDirectoryName] = useState("My Home");
   const [directoriesList, setDirectoriesList] = useState([]);
