@@ -26,7 +26,7 @@ function DirectoryView() {
   const { dirId } = useParams();
   const navigate = useNavigate();
 
-  const [directoryName, setDirectoryName] = useState("My Drive");
+  const [directoryName, setDirectoryName] = useState("Home");
   const [directoriesList, setDirectoriesList] = useState([]);
   const [filesList, setFilesList] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
@@ -102,7 +102,8 @@ function DirectoryView() {
 
   function handleRowClick(type, id) {
     if (type === "directory") navigate(`/directory/${id}`);
-    else window.location.href = `${import.meta.env.VITE_BACKEND_BASE_URL}/file/${id}`;
+    else
+      window.location.href = `${import.meta.env.VITE_BACKEND_BASE_URL}/file/${id}`;
   }
 
   async function handleFileSelect(e) {
