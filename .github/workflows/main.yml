@@ -14,8 +14,8 @@ jobs:
 
     steps:
       - name: Clone frontend repository
-        run: git clone https://github.com/procodrr/stroageApp-frontend.git .
-
+        uses: actions/checkout@v4
+        
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
